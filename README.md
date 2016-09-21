@@ -152,7 +152,7 @@ running `rib clean`.
 A build script can set environment variables that are made available to later
 scripts. This is done by writing data to file descriptor 3, on the form
 `<command> \x1f <key> \x1f <value> \x00`. The separator is the ASCII [unit
-separator][1], represented in octal, decimal and hex by: `037`, `0x1F`, `31`.
+separator][5], represented in octal, decimal and hex by: `037`, `0x1F`, `31`.
 
 These commands are available:
 * `setenv`, `key=ENV_VAR_NAME`, `value=ENV_VAR_VALUE`: Set the specified
@@ -160,7 +160,7 @@ environment variable to the given value.
 * `unsetenv`, `key=ENV_VAR_NAME`: Unset the specified environment variable.
 Note that an empty `value` field must be included.
 
-[1]: https://www.lammertbies.nl/comm/info/ascii-characters.html#unit
+[5]: https://www.lammertbies.nl/comm/info/ascii-characters.html#unit
 
 
 #### Examples
@@ -253,7 +253,7 @@ consider the separation of configuration and volatile vs persistent data.
 Despite the bold vision, `rib` is little more than a beefed-up alternative to
 `run-parts(8)`. The original design plans involved being be able to bootstrap
 both deb- and rpm-based systems and build a simple init that would mount the
-squashfs image for further booting. This is akin to what [debirf][1] has been
+squashfs image for further booting. This is akin to what [debirf][6] has been
 doing for years – `rib` would modernize the approach a bit, using squashfs
 together with tmpfs or zram, etc.
 
@@ -263,10 +263,10 @@ and reduces flexibility. By separating the build infrastructure (directory
 management, dealing with fakeroot, fakechroot and chroot) from the scripts that
 actually do the heavy lifting, the result is reduced complexity in `rib` itself
 and greatly increased flexibility in the build scripts. The [build scripts
-examples][3] are relatively simple shell scripts that produce useful images.
+examples][7] are relatively simple shell scripts that produce useful images.
 
-[1]: http://cmrg.fifthhorseman.net/wiki/debirf
-[2]: https://github.com/sveniu/rib-examples/
+[6]: http://cmrg.fifthhorseman.net/wiki/debirf
+[7]: https://github.com/sveniu/rib-examples/
 
 
 Packaging
