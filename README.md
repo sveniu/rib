@@ -16,7 +16,7 @@ filesystem, it is very easy to shoot yourself in the foot.
 `rib` is inspired by tools like [debirf][3] and [FAI][4].
 
 [1]: https://github.com/dex4er/fakechroot/
-[2]: https://github.com/sveniu/rib-examples/debian-jessie-small/
+[2]: https://github.com/sveniu/rib-examples/tree/master/debian-jessie-small/
 [3]: http://cmrg.fifthhorseman.net/wiki/debirf
 [4]: http://fai-project.org/
 
